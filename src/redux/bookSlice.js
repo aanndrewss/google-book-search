@@ -33,7 +33,7 @@ export const bookSlice = createSlice({
             state.totalBooksCount = action.payload
         },
         loadMore(state){
-            state.startIndex += 1
+            state.startIndex += 32
         },
         setFilter(state, action){
             state.filter = action.payload

@@ -16,7 +16,7 @@ export const Main = () => {
             <Books/>
             {totalBooksCount !== 0 ?
                 <div className={styles.btnWrapper}>
-                    <Button onClick={dispatch(loadMore)} className={styles.btn} size='large' variant='contained'>
+                    <Button onClick={() => dispatch(loadMore())} className={styles.btn} size='large' variant='contained'>
                         Load more
                     </Button>
                 </div>
