@@ -8,7 +8,7 @@ import {loadMore} from "../../redux/actionCreators";
 
 export const Main = () => {
 
-    const {totalBooksCount} = useSelector(state => state.bookReducer)
+    const {totalBooksCount, filter, startIndex} = useSelector(state => state.bookReducer)
     const dispatch = useDispatch()
 
     return (
@@ -16,7 +16,7 @@ export const Main = () => {
             <Books/>
             {totalBooksCount !== 0 ?
                 <div className={styles.btnWrapper}>
-                    <Button onClick={() => dispatch(loadMore())} className={styles.btn} size='large' variant='contained'>
+                    <Button onClick={() => dispatch(loadMore(filter, startIndex))} className={styles.btn} size='large' variant='contained'>
                         Load more
                     </Button>
                 </div>

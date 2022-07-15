@@ -19,10 +19,6 @@ export const Header = () => {
         dispatch(fetchBooks(filter, startIndex))
     }
 
-    useEffect(() => {
-        dispatch(fetchBooks(filter, startIndex))
-    }, [startIndex])
-
     const {
         register,
         handleSubmit,
