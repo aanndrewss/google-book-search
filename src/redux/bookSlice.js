@@ -10,7 +10,8 @@ let initialState = {
         term: '',
         orderBy: 'relevance'
     },
-    error: ''
+    error: '',
+    bookId: ''
 }
 
 export const bookSlice = createSlice({

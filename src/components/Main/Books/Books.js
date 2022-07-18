@@ -2,7 +2,7 @@ import React from 'react'
 import {Card, CardContent, Grid, Typography} from "@mui/material";
 import {useSelector} from "react-redux";
 import styles from './Books.module.scss'
-import {Link} from "react-router-dom";
+import {Link, useSearchParams} from "react-router-dom";
 
 
 export const Books = () => {

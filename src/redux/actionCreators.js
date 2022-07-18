@@ -26,3 +26,13 @@ export const loadMore = (filter, startIndex) => async (dispatch) => {
         dispatch(bookSlice.actions.booksFetchingError(e.message))
         }
 }
+
+export const fetchBook = (id) => async (dispatch) => {
+    try {
+        dispatch(bookSlice.actions.booksFetching())
+        const response = await axios.get(`https://books.google.com/books?id=${id}`)
+        console.log(response.data)
+    } catch (e) {
+        dispatch(bookSlice.actions.booksFetchingError(e.message))
+    }
+}
